@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/dashboard.css">
+  <title>Api Consume</title>
+</head>
+<body>
+  
+<main class="main">
+    <h2>Aquí tienes una api de Rick And Morty con Varios de sus presonajes y un poco de su información</h2>
+  <div class="containerRick" data-bind="foreach: characters">
+      <div class="containerCard">
+        <span class="name" data-bind="text: $data.name" ></span>
+        <p class="species" data-bind="text: $data.species"></p>
+        <p class="gender" data-bind="text: $data.gender"></p>
+        <p class="status" data-bind="text: $data.status"></p>
+        <img class="img" data-bind="attr: {src: $data.image}" alt="">
+      </div>
+  </div>
+</main>  
+</body>
+</html>
